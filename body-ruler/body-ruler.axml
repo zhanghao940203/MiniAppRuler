@@ -1,0 +1,20 @@
+<view id="body-ruler">
+  <text class="title">{{title}}</text>
+  <view class="value">
+    <text class="number">{{num}}</text>
+    <text class="unit">{{unit}}</text>
+  </view>
+  <view class="ruler">
+    <view class="mark-line" style="left:{{halfWindowWidth-1}}px" />
+    <scroll-view class="scaler" scroll-x="{{true}}" scroll-left="{{scrollLeft}}" onScroll="didScroll">
+      <view class="ruler-item">
+        <view a:for="{{list}}" a:for-item="item" a:for-index="index">
+          <view class="ruler-mark" style="margin-right:{{index == list.length-1 ? halfWindowWidth+8 : '0'}}px;margin-left:{{index == 0 ? halfWindowWidth+8 : '0'}}px">
+          <view class="line" style="height:{{((index) % 5 == 0) ? '40' : '24'}}rpx;" id="{{index}}"></view>
+          <view class="mark" a:if="{{(index) % 5 == 0}}" >{{item}}</view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

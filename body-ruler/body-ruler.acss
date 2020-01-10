@@ -1,0 +1,72 @@
+#body-ruler {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+#body-ruler .title {
+    font-size: 32rpx;
+    color: #333333;
+}
+#body-ruler .value {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 20rpx;
+    padding-left: 40rpx;
+}
+#body-ruler .number {
+    font-size: 100rpx;
+    font-weight: bold;
+    color: #00C489;
+}
+#body-ruler .unit {
+    font-size: 32;
+    color: #00C489;
+}
+#body-ruler .scaler {
+    display: flex;
+    margin: 24rpx 0 60rpx 0;
+    flex-direction: row;
+    width: 100vw;
+    /* height: 224rpx; */
+}
+.mark-line {
+    position: absolute;
+    width: 3px;
+    height: 40rpx;
+    background-color: #00C489;
+    margin: 24rpx 8rpx 0 8px;
+    z-index: 2001;
+}
+.ruler-mark {
+    width: 18px;
+}
+#body-ruler .line {
+    width: 2px;
+    height: 12px;
+    background-color: #C8C8C8;
+    margin: 0 8px 0 8px;
+}
+#body-ruler .mark {
+    color: #999999;
+    width: 18px;
+    margin-top: 20rpx;
+    font-size: 18rpx;
+}
+#body-ruler .blank-area {
+    display: block;
+    width: 375px;
+    height: 25vh;
+    background-color: #ffffff;
+}
+.ruler-item {
+    display: flex;
+    flex-direction: row;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}
